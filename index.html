@@ -1,0 +1,173 @@
+<!doctype html>
+    <html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Учебная страница с гиперссылками, таблицей, формой и калькулятором.">
+        <title>Sanamer | Учебный сайт</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="ssssssss.jpg" sizes="any">
+        <script src="js/calculator.js" defer></script>
+    </head>
+    <body>
+
+    <header class="site-header">
+        <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-3 py-3 py-md-4">
+            <a class="brand d-inline-flex align-items-center gap-3" href="index.html" aria-label="На главную страницу">
+                <span class="brand-logo" aria-hidden="true">S</span>
+                <span>Sanamer — учебный сайт</span>
+            </a>
+            <nav class="site-nav d-flex flex-column flex-md-row gap-1" aria-label="Основная навигация">
+                <a class="px-3 py-2 rounded" href="#links">Гиперссылки</a>
+                <a class="px-3 py-2 rounded" href="#schedule">Таблица</a>
+                <a class="px-3 py-2 rounded" href="service.html">Услуги</a>
+                <a class="px-3 py-2 rounded" href="gallery.html">Галерея</a>
+                <a class="px-3 py-2 rounded" href="#calculator">Калькулятор</a>
+                <a class="px-3 py-2 rounded" href="#contact">Форма</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-4 py-md-5">
+        <div class="row g-4">
+
+            <section class="content-section col-12 order-2 order-md-1 p-4" id="links" aria-labelledby="links-title">
+                <h1 id="links-title" class="mb-2">Список гиперссылок</h1>
+                <p class="section-intro mb-3">Примеры абсолютных, относительных и якорных ссылок.</p>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-7">
+                        <ul class="links-list d-grid gap-2 ps-4 mb-0">
+                            <li><a href="https://kubsu.ru/">Главная страница КубГУ по HTTPS</a></li>
+                            <li><a href="https://kubsu.ru/">Главная страница КубГУ по HTTP</a></li>
+                            <li><a href="page.html">Внутренняя страница каталога</a></li>
+                            <li><a href="about.html">Страница About</a></li>
+                            <li><a href="page1.html">На уровень выше</a></li>
+                            <li><a href="page.html?name=LeonovDmitry&amp;surname=Sanamersky&amp;age=19">Ссылка с тремя параметрами</a></li>
+                            <li><a href="page.html?id=011">Ссылка с параметром id</a></li>
+                            <li>Обычный текст с <a href="https://kubsu.ru/">контекстной ссылкой</a> внутри предложения.</li>
+                            <li><a href="#contact">Переход к форме на этой странице</a></li>
+                            <li><a href="ftp://example.com/file.zip">Ссылка на FTP-файл</a></li>
+                            <li><a href="https://papounidis.com/sanamer/">Фрагмент стороннего сайта</a></li>
+                            <li><a href="">Пустой href</a></li>
+                            <li><a>Ссылка без href</a></li>
+                            <li><a href="https://example.com" rel="nofollow">Ссылка с запретом индексации поисковиками</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <a href="https://sobory.ru/article/?object=14971">
+                            <img class="university-photo mb-3" src="Церковь.jpg" alt="Здание Кубанского государственного университета">
+                        </a>
+                        <figure class="image-map mt-4 mb-0">
+                            <img src="tsalka-canyon-tour-map-big.jpg" usemap="#university-map" width="900" height="600" alt="Карта изображения с областями КубГУ и Google">
+                            <map name="university-map">
+                                <area shape="circle" coords="220,150,18" href="https://www.advantour.com/rus/georgia/tsalka-canyon.htm" alt="Каньон-Цалка">
+                                <area shape="circle" coords="400,110,15" href="https://www.advantour.com/rus/georgia/tbilisi.htm" alt="Тбилиси">
+                                <area shape="circle" coords="140,210,18" href="https://www.advantour.com/georgia/akhalkalaki/paravani.htm" alt="Каньон-Цалка">
+                            </map>
+                            <figcaption class="mt-2">Изображения Грузии на карте.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section col-12 order-1 order-md-2 p-4" id="schedule" aria-labelledby="schedule-title">
+                <h2 id="schedule-title" class="mb-2">Таблица учебных материалов</h2>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <caption>План работы над учебным сайтом</caption>
+                        <thead>
+                        <tr>
+                            <th scope="col">Неделя</th>
+                            <th scope="col">Тема</th>
+                            <th scope="col">Материал</th>
+                            <th scope="col">Статус</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td rowspan="2">1</td><td>Гиперссылки</td><td>Абсолютные и относительные ссылки</td><td>Готово</td></tr>
+                        <tr><td>Навигация</td><td>Ссылки и меню</td><td>Готово</td></tr>
+                        <tr><td rowspan="2">2</td><td>Таблицы</td><td>Объединение ячеек</td><td>Готово</td></tr>
+                        <tr><td>Стилизация</td><td>Чётные и нечётные строки</td><td>Готово</td></tr>
+                        <tr><td>3</td><td>Формы</td><td>Поля ввода и отправка сообщения</td><td>Готово</td></tr>
+                        <tr><td>4</td><td>Формы</td><td>Bootstrap</td><td>Готово</td></tr>
+                        <tr><td>5</td><td>JavaScript</td><td>Калькулятор стоимости заказа</td><td>Готово</td></tr>
+                        <tr><td>6</td><td>JavaScript</td><td>Услуги</td><td>Готово</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="content-section col-12 order-3 p-4" id="calculator" aria-labelledby="calculator-title">
+                <h2 id="calculator-title" class="mb-2">Калькулятор стоимости заказа</h2>
+                <form class="row g-3" id="calculator-form" action="#calculator" method="get">
+                    <div class="col-12 col-md-6">
+                        <label for="product">Товар:</label>
+                        <select id="product" name="product">
+                            <option value="150000">Видеокарта GeForce rtx 5090 — 150000 руб.</option>
+                            <option value="6000">Мышка Razer viper v3 — 6000 руб.</option>
+                            <option value="25000">Монитор Aoc 27g2g8 — 25000 руб.</option>
+                            <option value="8000">Клавиатура MechLands — 8000 руб.</option>
+                            <option value="7000">Наушники Logitech g435 — 7000 руб.</option>
+                            <option value="14000">Наушники Intel core i5 11400f — 14000 руб.</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="quantity">Количество:</label>
+                        <input type="text" id="quantity" name="quantity" value="" inputmode="numeric" autocomplete="off">
+                    </div>
+                    <div class="col-12">
+                        <button type="button" id="calculator-button" class="py-2 px-4">Посчитать стоимость</button>
+                    </div>
+                    <div class="col-12">
+                        <p id="calc-error" class="calc-error" role="alert"></p>
+                        <p id="calc-result" class="calc-result" aria-live="polite"></p>
+                    </div>
+                </form>
+            </section>
+
+            <section class="content-section col-12 order-4 p-4" id="contact" aria-labelledby="contact-title">
+                <h2 id="contact-title" class="mb-2">Форма обратной связи</h2>
+                <form class="row g-3" action="#contact" method="get">
+                    <div class="col-12 col-md-6">
+                        <label for="fullname">ФИО:</label>
+                        <input type="text" name="fullname" id="fullname" required placeholder=" "
+                               pattern="[A-Za-zА-Яа-яЁё\s]+" title="Пожалуйста, используйте только буквы и пробелы">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="email">Электронная почта</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" name="phone" id="phone" pattern="[0-9+]{10,}" title="Формат: +7... или 10 цифр" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="col-12">
+                        <label class="agreement d-flex align-items-start gap-2">
+                            <input name="agreement" type="checkbox" required class="mt-1"> Я согласен на обработку данных формы.
+                        </label>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="py-2 px-4">Отправить</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer py-4">
+        <div class="container text-center">
+            © 2026 Sanamer. Учебная работа по разработке Web-интерфейса.<br>
+            Контактные данные: maxagurbek@gmail.com
+        </div>
+    </footer>
+
+    </body>
+    </html>
+ 

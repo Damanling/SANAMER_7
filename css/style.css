@@ -1,0 +1,278 @@
+
+:root {
+    --blue:#1f5f93;
+    --blue-dark:#123f64;
+    --blue-light:#fff;
+    --border:#bdd3e5;
+    --text:#1c2b36;
+    --muted:#5a6b78;
+    --surface:#fff;
+    --bs-primary: #1f5f93;
+    --bs-primary-rgb: 31, 95, 147;
+    --bs-link-color: #075a99;
+    --bs-link-hover-color: #123f64;
+    --bs-body-bg: #f2f6f9;
+    --bs-body-font-family: Arial, Helvetica, sans-serif;
+    --bs-focus-ring-color: rgba(31, 95, 147, .25);
+}
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #123f64;
+    --bs-btn-hover-border-color: #123f64;
+    --bs-btn-active-bg: #123f64;
+    --bs-btn-active-border-color: #123f64;
+    --bs-btn-disabled-bg: var(--bs-primary);
+    --bs-btn-disabled-border-color: var(--bs-primary);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body { margin:0; background:#f2f6f9; color:var(--text); font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:1.5; }
+a { color:#075a99; }
+a:hover, a:focus { color:var(--blue-dark); }
+
+.site-header, .site-footer { background:var(--blue); color:#fff; }
+
+/*смартфон.*/
+
+.header-inner, .page-content, .footer-inner {
+    width:100%;
+    margin:0;
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.header-inner {
+    min-height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:16px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.brand { display:inline-flex; align-items:center; gap:14px; color:#fff; font-size:1.25rem; font-weight:700; text-decoration:none; }
+.brand:hover, .brand:focus { color:#fff; }
+.brand-logo {
+    display:grid;
+    place-items:center;
+    width:62px;
+    height:62px;
+    border:2px solid #fff;
+    border-radius:50%;
+    font-size:2rem;
+
+    flex-shrink:0;
+    aspect-ratio:1/1;
+}
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, .18);
+}
+
+.content-section .card-title {
+    color: var(--bs-primary);
+}
+
+.site-nav {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    gap:6px;
+}
+
+.site-nav a { color:#fff; padding:9px 12px; border-radius:4px; text-decoration:none; }
+.site-nav a:hover, .site-nav a:focus { background:rgba(255,255,255,.18); color:#fff; }
+
+.page-content {
+    display:flex;
+    flex-direction:column;
+    padding-top:32px;
+    padding-bottom:48px;
+}
+
+#schedule { order:-1; }
+
+.content-section { margin-bottom:24px; padding:20px; background:var(--surface); border:1px solid var(--border); border-radius:8px; box-shadow:0 2px 8px rgba(22,55,79,.06); }
+
+h1, h2 { margin:0 0 8px; color:var(--blue-dark); line-height:1.2; }
+h1 { font-size:1.7rem; }
+h2 { font-size:1.3rem; }
+
+.section-intro { margin:0 0 18px; color:var(--muted); }
+.links-list { display:grid; gap:10px; margin:0; padding-left:24px; }
+.university-photo { max-width:100%; height:auto; border:1px solid var(--border); border-radius:4px; }
+.image-map { margin:24px 0 0; }
+.image-map img { max-width:100%; height:auto; border:1px solid var(--border); }
+.image-map figcaption { margin-top:6px; color:var(--muted); font-size:.9rem; }
+
+.table-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; min-width:680px; }
+caption { margin-bottom:10px; color:var(--muted); font-weight:700; text-align:left; }
+th, td { padding:12px 14px; border:1px solid var(--border); text-align:left; }
+th { background:var(--blue); color:#fff; }
+tbody tr:nth-child(odd) { background:var(--blue-light); }
+tbody tr:nth-child(even) { background:#fff; }
+
+.contact-form { display:grid; gap:1px; max-width:640px; }
+.form-field { display:grid; gap:6px; margin-bottom:16px; }
+label { font-weight:700; }
+
+input, textarea, button { font:inherit; }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width:100%;
+    box-sizing:border-box;
+    padding:10px 12px;
+    border:1px solid #91b4c7;
+    border-radius:4px;
+}
+input:focus, select:focus, textarea:focus { outline:3px solid rgba(31,95,147,.25); border-color:var(--blue); }
+.agreement { display:flex; align-items:flex-start; gap:8px; font-weight:400; }
+.agreement input { margin-top:5px; }
+
+button { width:fit-content; padding:10px 18px; border:0; border-radius:4px; background:var(--blue); color:#fff; cursor:pointer; }
+button:hover, button:focus { background:var(--blue-dark); }
+
+.site-footer { padding:26px 0; }
+.footer-inner { text-align:center; }
+
+/*планшет.*/
+
+@media (min-width:681px) {
+    .header-inner, .page-content, .footer-inner {
+        width:min(960px, calc(100% - 32px));
+        margin:0 auto;
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .header-inner {
+        min-height:124px;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        gap:24px;
+    }
+
+    .site-nav {
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:flex-end;
+        width:auto;
+    }
+
+    .page-content {
+        display:block;
+    }
+
+    #schedule { order:0; }
+
+    .content-section { padding:28px; }
+
+    h1 { font-size:2rem; }
+    h2 { font-size:1.5rem;}
+}
+
+
+/*калькулятор.*/
+
+.calc-error { margin:0; color:#b00020; font-weight:700; }
+.calc-error:empty, .calc-result:empty { display:none; }
+.calc-result { margin:0; color:var(--blue-dark); font-size:1.25rem; font-weight:700; }
+
+select {
+    -webkit-appearance:none;
+    appearance:none;
+    background-color:#fff;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231f5f93' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 12px center;
+    padding-right:36px;
+    min-height:46px;
+    cursor:pointer;
+}
+
+[hidden] { display:none !important; }
+fieldset { border:0; margin:0; padding:0; }
+
+/*убрать рамку-квадрат у радиокнопок и чекбоксов при клике мышью.*/
+input[type="radio"]:focus,
+input[type="checkbox"]:focus { outline:none; }
+input[type="radio"]:focus-visible,
+input[type="checkbox"]:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+
+/*подвал всегда внизу страницы.*/
+body { display:flex; flex-direction:column; min-height:100vh; }
+main { flex:1 0 auto; width:100%; }
+.site-footer { margin-top:auto; }
+
+/*крупная форма калькулятора услуги.*/
+.big-form { font-size:1.15rem; }
+.big-form input[type="text"],
+.big-form select { padding:16px 18px; font-size:1.15rem; min-height:56px; }
+.big-form input[type="radio"],
+.big-form input[type="checkbox"] { width:1.3em; height:1.3em; margin-top:.2em; }
+.big-form .agreement { gap:12px; margin-bottom:10px; }
+.big-form .calc-result { font-size:1.6rem; }
+input.invalid { border-color:#b00020; background:#fff5f6; }
+
+/*кнопка оплаты.*/
+button:disabled, button:disabled:hover { background:#9db3c4; cursor:not-allowed; }
+.calc-payment { margin:16px 0 0; color:#1b6b34; font-size:1.25rem; font-weight:700; }
+.calc-payment:empty { display:none; }
+
+/*детализация заказа.*/
+.calc-breakdown { margin:0 0 12px; padding-left:1.4rem; color:var(--muted); }
+.calc-breakdown:empty { display:none; }
+
+/*круглые чекбоксы и радиокнопки на странице калькулятора услуг.*/
+.big-form input[type="checkbox"],
+.big-form input[type="radio"] {
+    -webkit-appearance:none;
+    appearance:none;
+    display:inline-grid;
+    place-content:center;
+    flex-shrink:0;
+    border:2px solid #91b4c7;
+    border-radius:50%;
+    background:#fff;
+    cursor:pointer;
+    transition:background-color .15s, border-color .15s;
+}
+.big-form input[type="checkbox"]:hover,
+.big-form input[type="radio"]:hover { border-color:var(--blue); }
+.big-form input[type="checkbox"]:checked,
+.big-form input[type="radio"]:checked { background:var(--blue); border-color:var(--blue); }
+
+/* галочка внутри круга */
+.big-form input[type="checkbox"]::before {
+    content:"";
+    width:.65em;
+    height:.32em;
+    border-left:.14em solid #fff;
+    border-bottom:.14em solid #fff;
+    transform:rotate(-45deg) translate(.04em,-.06em) scale(0);
+    transition:transform .15s;
+}
+.big-form input[type="checkbox"]:checked::before {
+    transform:rotate(-45deg) translate(.04em,-.06em) scale(1);
+}
+
+
+.big-form input[type="radio"]::before {
+    content:"";
+    width:.5em;
+    height:.5em;
+    border-radius:50%;
+    background:#fff;
+    transform:scale(0);
+    transition:transform .15s;
+}
+.big-form input[type="radio"]:checked::before { transform:scale(1); }
+ 

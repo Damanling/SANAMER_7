@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Учебная страница с гиперссылками, таблицей и формой.">
+    <title>Sanamer | Учебный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="На главную страницу"><span class="brand-logo" aria-hidden="true">S</span><span>Sanamer — учебный сайт</span></a>
+        <nav class="site-nav" aria-label="Основная навигация"><a href="#links">Гиперссылки</a><a href="#schedule">Таблица</a><a href="#contact">Форма</a></nav>
+    </div>
+</header>
+<main class="page-content">
+    <section class="content-section" id="links" aria-labelledby="links-title">
+        <h1 id="links-title">Список гиперссылок</h1>
+        <p class="section-intro">Примеры абсолютных, относительных и якорных ссылок.</p>
+        <ul class="links-list">
+            <li><a href="https://kubsu.ru/">Главная страница КубГУ по HTTPS</a></li>
+            <li><a href="http://kubsu.ru/">Главная страница КубГУ по HTTP</a></li>
+            <li><a href="https://www.kubsu.ru/"><img class="university-photo" src="Церковь.jpg" alt="Здание Кубанского государственного университета"></a></li>
+            <li><a href="page.html">Внутренняя страница каталога tasks</a></li>
+            <li><a href="about.html">Страница About</a></li>
+            <li><a href="page1.html">Страница на первом уровне</a></li>
+            <li><a href="page.html?name=LeonovDmitry&amp;surname=Sanamersky&amp;age=19">Ссылка с тремя параметрами</a></li>
+            <li><a href="page.html?id=011">Ссылка с параметром id</a></li>
+            <li>Обычный текст с <a href="https://kubsu.ru/">контекстной ссылкой</a> внутри предложения.</li>
+            <li><a href="#contact">Переход к форме на этой странице</a></li>
+            <li><a href="ftp://student:12345@ftp.example.com/file.zip">Ссылка на FTP-файл</a></li>
+        </ul>
+        <figure class="image-map">
+            <img src="map.png" usemap="#university-map" width="425" height="181" alt="Карта изображения с областями КубГУ и Google">
+            <map name="university-map">
+                <area shape="rect" coords="0,0,100,100" href="https://kubsu.ru/" alt="Сайт КубГУ">
+                <area shape="circle" coords="200,100,50" href="https://www.google.com/" alt="Google">
+            </map>
+            <figcaption>Изображение с кликабельными областями.</figcaption>
+        </figure>
+    </section>
+    <section class="content-section" id="schedule" aria-labelledby="schedule-title">
+        <h2 id="schedule-title">Таблица учебных материалов</h2>
+        <div class="table-wrap" tabindex="0">
+            <table>
+                <caption>План работы над учебным сайтом</caption>
+                <thead><tr><th scope="col">Неделя</th><th scope="col">Тема</th><th scope="col">Материал</th><th scope="col">Статус</th></tr></thead>
+                <tbody>
+                <tr><td rowspan="2">1</td><td>Гиперссылки</td><td>Абсолютные и относительные пути</td><td>Готово</td></tr>
+                <tr><td>Навигация</td><td>Якорные ссылки и меню</td><td>Готово</td></tr>
+                <tr><td rowspan="2">2</td><td>Таблицы</td><td>Объединение ячеек</td><td>Готово</td></tr>
+                <tr><td>Стилизация</td><td>Чётные и нечётные строки</td><td>Готово</td></tr>
+                <tr><td>3</td><td>Формы</td><td colspan="2">Поля ввода и отправка сообщения</td></tr>
+                <tr><td>4</td><td>Публикация</td><td>Проверка валидатором и GitLab Pages</td><td>Запланировано</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="content-section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Форма обратной связи</h2>
+        <form class="contact-form" action="#contact" method="get">
+            <div class="form-field"><label for="name">Имя</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+            <div class="form-field"><label for="email">Электронная почта</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="form-field"><label for="message">Сообщение</label><textarea id="message" name="message" rows="5" required></textarea></div>
+            <label class="agreement"><input name="agreement" type="checkbox" required> Я согласен на обработку данных формы.</label>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+</main>
+<footer class="site-footer"><div class="footer-inner">© 2026 Sanamer. Учебная работа по разработке Web-интерфейса.</div></footer>
+</body>
+</html>

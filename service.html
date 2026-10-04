@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Услуги.">
+    <title>Sanamer | Калькулятор услуг</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="ssssssss.jpg" sizes="any">
+    <script src="js/service.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-3 py-3 py-md-4">
+        <a class="brand d-inline-flex align-items-center gap-3" href="index.html" aria-label="На главную страницу">
+            <span class="brand-logo" aria-hidden="true">S</span>
+            <span>Sanamer — учебный сайт</span>
+        </a>
+        <nav class="site-nav d-flex flex-column flex-md-row gap-1" aria-label="Основная навигация">
+            <a class="px-3 py-2 rounded" href="index.html">Главная</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container py-4 py-md-5">
+    <section class="content-section p-4 p-md-5" id="service" aria-labelledby="service-title">
+        <h1 id="service-title" class="mb-2">Услуги</h1>
+        <p class="section-intro mb-3">Выберите основную услугу и любые дополнительные, цена пересчитывается сразу.</p>
+
+        <form class="row g-4 big-form" id="service-form" action="#service" method="get">
+            <div class="col-12">
+                <fieldset>
+                    <legend class="fs-6 fw-bold">Основная услуга:</legend>
+                    <label class="agreement d-flex align-items-start gap-2">
+                        <input type="radio" name="service" value="landing" data-name="Лендинг" data-price="15000" class="mt-1"> Лендинг — 15000 руб.
+                    </label>
+                    <label class="agreement d-flex align-items-start gap-2">
+                        <input type="radio" name="service" value="shop" data-name="Интернет-магазин" data-price="30000" class="mt-1"> Интернет-магазин — 30000 руб.
+                    </label>
+                    <label class="agreement d-flex align-items-start gap-2">
+                        <input type="radio" name="service" value="corporate" data-name="Корпоративный сайт" data-price="20000" class="mt-1"> Корпоративный сайт — 20000 руб.
+                    </label>
+                </fieldset>
+            </div>
+
+            <div class="col-12" id="option-block" hidden>
+                <label for="option">Комплектация:</label>
+                <select id="option" name="option">
+                    <option value="0" data-name="Базовая комплектация">Базовая — +0 руб.</option>
+                    <option value="10000" data-name="Комплектация «С каталогом»">С каталогом — +10000 руб.</option>
+                    <option value="20000" data-name="Комплектация «С онлайн-оплатой»">С онлайн-оплатой — +20000 руб.</option>
+                </select>
+            </div>
+
+            <div class="col-12" id="property-block" hidden>
+                <label class="agreement d-flex align-items-start gap-2">
+                    <input type="checkbox" id="property" name="property" value="8000" data-name="Адаптация под мобильные" class="mt-1"> Адаптация под мобильные устройства — +8000 руб.
+                </label>
+            </div>
+
+            <div class="col-12">
+                <fieldset>
+                    <legend class="fs-6 fw-bold">Дополнительные услуги (можно выбрать несколько):</legend>
+                    <label class="agreement d-flex align-items-start gap-2">
+                        <input type="checkbox" name="extra" value="12000" data-name="SEO-продвижение" class="mt-1"> SEO-продвижение — +12000 руб.
+                    </label>
+                    <label class="agreement d-flex align-items-start gap-2">
+                        <input type="checkbox" name="extra" value="6000" data-name="Хостинг на год" class="mt-1"> Хостинг на год — +6000 руб.
+                    </label>
+                    <label class="agreement d-flex align-items-start gap-2">
+                        <input type="checkbox" name="extra" value="9000" data-name="Поддержка 3 месяца" class="mt-1"> Техподдержка 3 месяца — +9000 руб.
+                    </label>
+                    <label class="agreement d-flex align-items-start gap-2">
+                        <input type="checkbox" name="extra" value="5000" data-name="Копирайтинг" class="mt-1"> Копирайтинг текстов — +5000 руб.
+                    </label>
+                </fieldset>
+            </div>
+
+            <div class="col-12">
+                <ul id="service-breakdown" class="calc-breakdown"></ul>
+                <p id="service-result" class="calc-result" aria-live="polite"></p>
+            </div>
+
+            <div class="col-12">
+                <button type="button" id="pay-button" class="py-2 px-4" disabled>Оплатить</button>
+                <p id="service-payment" class="calc-payment" role="status"></p>
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer py-4">
+    <div class="container text-center">
+        © 2026 Sanamer. Учебная работа по разработке Web-интерфейса.<br>
+        Контактные данные: maxagurbek@gmail.com
+    </div>
+</footer>
+
+</body>
+</html>

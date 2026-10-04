@@ -1,0 +1,114 @@
+/*галерея-слайдер. Количество изображений на экране задаёт --per-view.*/
+
+.slider {
+    --per-view: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (min-width: 768px) {
+    .slider {
+        --per-view: 3;
+        gap: 16px;
+    }
+}
+
+.slider-viewport {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: transform .4s ease;
+}
+
+.slider-slide {
+    flex: 0 0 calc(100% / var(--per-view));
+    padding: 0 8px;
+}
+
+.slider-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+/*стрелки.*/
+.slider-arrow {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+}
+
+.slider-arrow:hover,
+.slider-arrow:focus-visible {
+    background: var(--blue-dark);
+}
+
+.slider-arrow svg {
+    width: 22px;
+    height: 22px;
+}
+
+@media (min-width: 768px) {
+    .slider-arrow {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/*пейджер.*/
+.slider-pager {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.slider-dot {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    background: #fff;
+}
+
+.slider-dot:hover,
+.slider-dot:focus-visible {
+    background: #9db3c4;
+}
+
+.slider-dot.is-active,
+.slider-dot.is-active:hover {
+    background: var(--blue);
+}
+
+.slider-status {
+    margin: 10px 0 0;
+    color: var(--muted);
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slider-track {
+        transition: none;
+    }
+}

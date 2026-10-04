@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Галерея изображений в виде горизонтального слайдера.">
+    <title>Sanamer | Галерея</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="icon" href="ssssssss.jpg" sizes="any">
+    <script src="js/gallery.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-3 py-3 py-md-4">
+        <a class="brand d-inline-flex align-items-center gap-3" href="index.html" aria-label="На главную страницу">
+            <span class="brand-logo" aria-hidden="true">S</span>
+            <span>Sanamer — учебный сайт</span>
+        </a>
+        <nav class="site-nav d-flex flex-column flex-md-row gap-1" aria-label="Основная навигация">
+            <a class="px-3 py-2 rounded" href="index.html">Главная</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container py-4 py-md-5">
+    <section class="content-section p-4 p-md-5" id="gallery" aria-labelledby="gallery-title">
+        <h1 id="gallery-title" class="mb-2">Каньон-Цалка</h1>
+        <p class="section-intro mb-4">Листайте стрелками или переключайте страницы точками.</p>
+
+        <div class="slider" id="slider">
+            <button type="button" class="slider-arrow" id="slider-prev" aria-label="Назад">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="slider-viewport">
+                <ul class="slider-track" id="slider-track">
+                        <li class="slider-slide"><img src="tsalka-canyon%201.jpg" width="400" height="300" alt="Изображение 1 из 8"></li>
+                        <li class="slider-slide"><img src="tsalka-canyon%202.jpg" width="900" height="600" alt="Изображение 2 из 8"></li>
+                        <li class="slider-slide"><img src="tsalka-canyon%203.jpg" width="400" height="300" alt="Изображение 3 из 8"></li>
+                        <li class="slider-slide"><img src="tsalka-canyon%204.jpg" width="400" height="300" alt="Изображение 4 из 8"></li>
+                        <li class="slider-slide"><img src="tsalka-canyon%205.jpg" width="400" height="300" alt="Изображение 5 из 8"></li>
+                        <li class="slider-slide"><img src="tsalka-canyon%206.jpg" width="400" height="300" alt="Изображение 6 из 8"></li>
+                        <li class="slider-slide"><img src="tsalka-caption%207.jpg" width="400" height="300" alt="Изображение 7 из 8"></li>
+                        <li class="slider-slide"><img src="tsalka-conion%208.jpg" width="400" height="300" alt="Изображение 8 из 8"></li>
+                </ul>
+            </div>
+            <button type="button" class="slider-arrow" id="slider-next" aria-label="Вперёд">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+
+        <div class="slider-pager" id="slider-pager" role="group" aria-label="Страницы галереи"></div>
+        <p class="slider-status" id="slider-status" aria-live="polite"></p>
+    </section>
+</main>
+
+<footer class="site-footer py-4">
+    <div class="container text-center">
+        © 2026 Sanamer. Учебная работа по разработке Web-интерфейса.<br>
+        Контактные данные: maxagurbek@gmail.com
+    </div>
+</footer>
+
+</body>
+</html>
