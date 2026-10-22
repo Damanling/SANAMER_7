@@ -1,5 +1,3 @@
-/*jslint browser */
-
 (function () {
     "use strict";
 

@@ -1,0 +1,122 @@
+
+.popup {
+    width: min(480px, calc(100% - 16px));
+    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(22, 55, 79, .35);
+    overflow: auto;
+    color: var(--text);
+}
+
+.popup::backdrop {
+    background: rgba(18, 63, 100, .55);
+}
+
+.popup-body {
+    position: relative;
+    padding: 20px;
+}
+
+.popup-title {
+    margin: 0 36px 12px 0;
+    font-size: 1.4rem;
+}
+
+.popup-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--blue);
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.popup-close:hover,
+.popup-close:focus-visible {
+    background: #e6eef5;
+    color: var(--blue-dark);
+}
+
+/*компактная форма: целиком помещается в экран смартфона.*/
+.feedback-form .form-field {
+    gap: 3px;
+    margin-bottom: 10px;
+}
+
+.feedback-form label {
+    font-size: .9rem;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form input[type="tel"],
+.feedback-form textarea {
+    padding: 8px 10px;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+    min-height: 72px;
+}
+
+.feedback-form .agreement {
+    margin: 2px 0 10px;
+    font-size: .85rem;
+}
+
+.feedback-form button[type="submit"] {
+    width: 100%;
+}
+
+.form-status {
+    margin: 0 0 10px;
+    font-size: .95rem;
+    font-weight: 700;
+}
+
+.form-status:empty {
+    display: none;
+}
+
+.form-status.is-info {
+    color: var(--muted);
+}
+
+.form-status.is-success {
+    color: #1b6b34;
+}
+
+.form-status.is-error {
+    color: #b00020;
+}
+
+@media (max-width: 480px) {
+    .popup-body {
+        padding: 12px 14px 14px;
+    }
+
+    .popup-title {
+        margin-bottom: 8px;
+        font-size: 1.15rem;
+    }
+
+    .feedback-form .form-field {
+        margin-bottom: 7px;
+    }
+
+    .feedback-form textarea {
+        min-height: 60px;
+    }
+
+    .feedback-form .agreement {
+        margin-bottom: 8px;
+    }
+}
